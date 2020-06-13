@@ -59,10 +59,10 @@
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="keP-gD-sii">
                                         <rect key="frame" x="0.0" y="50" width="288" height="127"/>
-                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="backgroundColor" name="BlackAndWhite"/>
                                         <color key="tintColor" name="BlackAndWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" name="BlackAndWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -78,7 +78,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-7m-N2J">
-                                <rect key="frame" x="103" y="191" width="114" height="34"/>
+                                <rect key="frame" x="40" y="191" width="240" height="34"/>
                                 <color key="backgroundColor" name="WhiteAndBlack"/>
                                 <color key="tintColor" name="BlackAndWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -89,14 +89,15 @@
                         <color key="tintColor" name="BlackAndWhite"/>
                         <constraints>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="top" secondItem="xGG-tm-8Kp" secondAttribute="bottom" constant="16" id="0Kc-iG-ZAC"/>
-                            <constraint firstItem="xBR-7m-N2J" firstAttribute="width" secondItem="IfW-pe-d85" secondAttribute="width" multiplier="1.00885" id="3Tf-vb-inD"/>
                             <constraint firstItem="xGG-tm-8Kp" firstAttribute="top" secondItem="tCS-T2-e6d" secondAttribute="bottom" constant="8" id="6a4-yg-cfR"/>
                             <constraint firstItem="xZD-14-MqV" firstAttribute="top" secondItem="tCS-T2-e6d" secondAttribute="bottom" constant="16" id="BKN-UG-Lw0"/>
                             <constraint firstItem="xGG-tm-8Kp" firstAttribute="leading" secondItem="bMJ-zE-O5d" secondAttribute="leading" constant="16" id="BdM-xv-RSr"/>
                             <constraint firstItem="xZD-14-MqV" firstAttribute="leading" secondItem="jFM-PD-dlM" secondAttribute="leading" constant="16" id="Eka-hL-NnH"/>
+                            <constraint firstItem="xBR-7m-N2J" firstAttribute="leading" secondItem="jFM-PD-dlM" secondAttribute="leading" constant="40" id="Jbn-ef-gHX"/>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="top" secondItem="xBR-7m-N2J" secondAttribute="bottom" constant="20" id="LWf-32-D5I"/>
                             <constraint firstItem="tCS-T2-e6d" firstAttribute="leading" secondItem="jFM-PD-dlM" secondAttribute="leading" id="Qh3-se-Ti9"/>
                             <constraint firstItem="xBR-7m-N2J" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="TRt-oQ-XAz"/>
+                            <constraint firstItem="jFM-PD-dlM" firstAttribute="trailing" secondItem="xBR-7m-N2J" secondAttribute="trailing" constant="40" id="UdR-jQ-mrl"/>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="width" secondItem="bMJ-zE-O5d" secondAttribute="height" multiplier="113:568" id="cWb-GK-dqW"/>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="centerY" secondItem="bMJ-zE-O5d" secondAttribute="centerY" constant="-20" id="dP9-UX-FhR"/>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="g1k-Hq-jI1"/>

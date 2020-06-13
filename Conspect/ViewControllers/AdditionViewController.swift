@@ -64,6 +64,7 @@ class AdditionViewController: UIViewController {
             subjectsTextField.isHidden = false
         case 2:
             topicTextViewOutlet.isHidden = false
+            topicTextViewOutlet.text = nil
         default:
             discriptionStackViewOutlet.isHidden = false
         }
