@@ -33,7 +33,7 @@ class AdditionViewController: UIViewController {
         switch showContents {
         case 1:
             addSubjectButton.isHidden = false
-            addTopicButton.isHidden = true
+//            addTopicButton.isHidden = true
         case 2:
             addSubjectButton.isHidden = true
             addTopicButton.isHidden = false
