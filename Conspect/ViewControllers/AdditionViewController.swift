@@ -17,9 +17,17 @@ protocol AdditionSubjectViewControllerDelegate {
 }
 
 class AdditionViewController: UIViewController {
-
-    @IBOutlet var addSubjectButton: UIButton!
-    @IBOutlet var addTopicButton: UIButton!
+    
+    @IBOutlet weak var buttonApplyOutlet: UIButton!
+    
+    @IBOutlet weak var subjectsTextField: UITextField!
+    @IBOutlet weak var topicTextViewOutlet: UITextView!
+    
+    @IBOutlet weak var discriptionStackViewOutlet: UIStackView!
+    @IBOutlet weak var discriptionTextFieldOutlet: UITextField!
+    @IBOutlet weak var discriptionTextViewOutlet: UITextView!
+    
+    
     
     var subjects: [Subject] = DataManager.shared.subjects
     var indexOfSubjects: Int!
@@ -30,35 +38,56 @@ class AdditionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        switch showContents {
-        case 1:
-            addSubjectButton.isHidden = false
-//            addTopicButton.isHidden = true
-        case 2:
-            addSubjectButton.isHidden = true
-            addTopicButton.isHidden = false
-        default:
-            addSubjectButton.isHidden = true
-            addTopicButton.isHidden = true
-        }
-    }
-    
-    @IBAction func addSubjectButtonTapped() {
-        print("Add new subject")
-        DataManager.shared.addNewSubject(name: "New subject", topics: [])
-        delegateSubject.returnAdditionData(name: "New subject")
-        dismiss(animated: true)
-    }
-    
-    @IBAction func addTopicButtonTapped() {
-        print("Add new topic")
-        DataManager.shared.addNewTopic(indexOfSubjects: indexOfSubjects, name: "New topic", description: "")
-        delegateTopic.returnAdditionData(indexOfSubjects: indexOfSubjects, name: "New topic", description: "")
-        dismiss(animated: true)
+        
+        hidenContents()
+        showContents(showContents)
+        pressButtonChoice(showContents)
     }
     
     @IBAction func cancelButtonTapped() {
         dismiss(animated: true)
+    }
+    
+    @IBAction func buttonApplyAction() {
+        
+    }
+    
+    private func hidenContents() {
+        subjectsTextField.isHidden = true
+        topicTextViewOutlet.isHidden = true
+        discriptionStackViewOutlet.isHidden = true
+    }
+    
+    private func showContents(_ showContents: Int) {
+        switch showContents {
+        case 1:
+            subjectsTextField.isHidden = false
+        case 2:
+            topicTextViewOutlet.isHidden = false
+        default:
+            discriptionStackViewOutlet.isHidden = false
+        }
+    }
+    
+    private func pressButtonChoice(_ showContents: Int) {
+        switch showContents {
+        case 1:
+            print("Add new subject")
+            DataManager.shared.addNewSubject(name: subjectsTextField.text ?? "", topics: [])
+            delegateSubject.returnAdditionData(name: subjectsTextField.text ?? "")
+            dismiss(animated: true)
+        case 2:
+            print("Add new topic")
+            DataManager.shared.addNewTopic(indexOfSubjects: indexOfSubjects, name: "New topic", description: topicTextViewOutlet.text ?? "")
+            delegateTopic.returnAdditionData(indexOfSubjects: indexOfSubjects, name: "New topic", description: topicTextViewOutlet.text ?? "")
+            dismiss(animated: true)
+        default:
+            dismiss(animated: true)  
+        }
+    }
+    
+    private func roundsCorners() {
+        buttonApplyOutlet.layer.cornerRadius = buttonApplyOutlet.frame.height / 4
     }
     
 }
