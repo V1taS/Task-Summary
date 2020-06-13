@@ -29,6 +29,8 @@ class AdditionViewController: UIViewController {
     
     
     
+    
+    
     var subjects: [Subject] = DataManager.shared.subjects
     var indexOfSubjects: Int!
     var showContents = 0

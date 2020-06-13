@@ -1,53 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Description View Controller-->
-        <scene sceneID="TjI-Yt-8ya">
+        <scene sceneID="KeI-Kc-CrB">
             <objects>
-                <viewController storyboardIdentifier="descriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qep-N7-Uxf" customClass="DescriptionViewController" customModule="Conspect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ReO-7y-hf2">
+                <viewController storyboardIdentifier="descriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9LV-C0-NgG" customClass="DescriptionViewController" customModule="ConspectWorkingInTeam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YTx-mM-CeJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEb-e1-plU">
-                                <rect key="frame" x="16" y="60.5" width="288" height="487.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5l-JH-M44">
-                                <rect key="frame" x="16" y="20" width="288" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hkS-dp-aSt">
+                                <rect key="frame" x="132" y="60" width="172" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Шрифт:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjV-hr-Lut">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="24"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ueg-FH-UHQ">
+                                        <rect key="frame" x="78" y="0.0" width="94" height="24"/>
+                                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeFontSize:" destination="9LV-C0-NgG" eventType="valueChanged" id="bBP-Xh-h7c"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43.5" id="dKR-T8-3qU"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="LmM-ZX-YE3">
+                                <rect key="frame" x="16" y="110" width="288" height="438"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-SD-4yC">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labo" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-iJ-i1T">
+                                        <rect key="frame" x="0.0" y="47.5" width="288" height="390.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jo-Ga-rvZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                <items>
+                                    <navigationItem id="TFi-qL-vl8">
+                                        <barButtonItem key="leftBarButtonItem" title="Понятненько" id="CvP-Yn-DsL">
+                                            <connections>
+                                                <action selector="goBack" destination="9LV-C0-NgG" id="UKq-Cb-pff"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Редактировать" id="yxO-g2-Bji">
+                                            <connections>
+                                                <segue destination="hLk-6W-KzS" kind="presentation" modalPresentationStyle="fullScreen" id="nSy-qm-p79"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="81g-Uj-FRH" firstAttribute="trailing" secondItem="T5l-JH-M44" secondAttribute="trailing" constant="16" id="ID0-20-cbb"/>
-                            <constraint firstItem="81g-Uj-FRH" firstAttribute="bottom" secondItem="MEb-e1-plU" secondAttribute="bottom" constant="20" id="QN4-Qw-Dg4"/>
-                            <constraint firstItem="T5l-JH-M44" firstAttribute="leading" secondItem="81g-Uj-FRH" secondAttribute="leading" constant="16" id="Vi7-Xc-mBq"/>
-                            <constraint firstItem="81g-Uj-FRH" firstAttribute="trailing" secondItem="MEb-e1-plU" secondAttribute="trailing" constant="16" id="Xm5-OV-TYf"/>
-                            <constraint firstItem="MEb-e1-plU" firstAttribute="leading" secondItem="81g-Uj-FRH" secondAttribute="leading" constant="16" id="fvH-TQ-Jx5"/>
-                            <constraint firstItem="T5l-JH-M44" firstAttribute="top" secondItem="81g-Uj-FRH" secondAttribute="top" constant="20" id="scr-vU-Zeq"/>
-                            <constraint firstItem="MEb-e1-plU" firstAttribute="top" secondItem="T5l-JH-M44" secondAttribute="bottom" constant="20" id="zEj-KU-G4d"/>
+                            <constraint firstItem="7Jo-Ga-rvZ" firstAttribute="leading" secondItem="SQJ-AW-eST" secondAttribute="leading" id="3Ku-ub-NFt"/>
+                            <constraint firstItem="LmM-ZX-YE3" firstAttribute="leading" secondItem="SQJ-AW-eST" secondAttribute="leading" constant="16" id="C6C-jz-8HY"/>
+                            <constraint firstItem="hkS-dp-aSt" firstAttribute="top" secondItem="7Jo-Ga-rvZ" secondAttribute="bottom" constant="60" id="Fd0-15-rQ4"/>
+                            <constraint firstItem="7Jo-Ga-rvZ" firstAttribute="top" secondItem="SQJ-AW-eST" secondAttribute="top" id="RYV-jc-Sfg"/>
+                            <constraint firstItem="SQJ-AW-eST" firstAttribute="trailing" secondItem="LmM-ZX-YE3" secondAttribute="trailing" constant="16" id="aVd-VE-5aa"/>
+                            <constraint firstItem="SQJ-AW-eST" firstAttribute="bottom" secondItem="LmM-ZX-YE3" secondAttribute="bottom" constant="20" id="fEu-Bb-lNc"/>
+                            <constraint firstItem="SQJ-AW-eST" firstAttribute="trailing" secondItem="hkS-dp-aSt" secondAttribute="trailing" constant="16" id="jGE-tb-vj5"/>
+                            <constraint firstItem="7Jo-Ga-rvZ" firstAttribute="trailing" secondItem="SQJ-AW-eST" secondAttribute="trailing" id="sXD-Bb-DtX"/>
+                            <constraint firstItem="LmM-ZX-YE3" firstAttribute="top" secondItem="hkS-dp-aSt" secondAttribute="bottom" constant="26" id="stV-ej-fSh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="81g-Uj-FRH"/>
+                        <viewLayoutGuide key="safeArea" id="SQJ-AW-eST"/>
                     </view>
                     <connections>
-                        <outlet property="descriptionTextView" destination="MEb-e1-plU" id="aHG-qh-yRG"/>
-                        <outlet property="nameLabel" destination="T5l-JH-M44" id="JI6-AF-wrt"/>
+                        <outlet property="descriptionTextView" destination="gu6-iJ-i1T" id="Vig-2n-pE7"/>
+                        <outlet property="fontStepper" destination="ueg-FH-UHQ" id="neC-s0-EeM"/>
+                        <outlet property="headerLabel" destination="3g4-SD-4yC" id="JkC-Qg-uWe"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2en-1j-ULM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RtR-aa-BhN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116.25" y="68.661971830985919"/>
+            <point key="canvasLocation" x="1728.75" y="498.59154929577466"/>
+        </scene>
+        <!--additionViewController-->
+        <scene sceneID="YbZ-sm-d2M">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="additionViewController" storyboardName="Addition" referencedIdentifier="additionViewController" id="hLk-6W-KzS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtw-fR-5CT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489" y="407"/>
         </scene>
     </scenes>
 </document>
