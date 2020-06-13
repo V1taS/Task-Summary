@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Addition View Controller-->
+        <scene sceneID="bzE-yT-skZ">
+            <objects>
+                <viewController storyboardIdentifier="additionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ajR-Yt-1Gu" customClass="AdditionViewController" customModule="Conspect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMJ-zE-O5d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHg-g4-A9d">
+                                <rect key="frame" x="114" y="328" width="92" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped" destination="ajR-Yt-1Gu" eventType="touchUpInside" id="XDP-9v-5qb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRF-WV-GDp">
+                                <rect key="frame" x="81.5" y="194" width="157" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="Add subject"/>
+                                <connections>
+                                    <action selector="addSubjectButtonTapped" destination="ajR-Yt-1Gu" eventType="touchUpInside" id="5CP-vK-dCQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPk-aS-Izc">
+                                <rect key="frame" x="97" y="261" width="126" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="Add topic"/>
+                                <connections>
+                                    <action selector="addTopicButtonTapped" destination="ajR-Yt-1Gu" eventType="touchUpInside" id="EJw-w6-99T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iRF-WV-GDp" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="VQJ-gn-hlC"/>
+                            <constraint firstItem="lPk-aS-Izc" firstAttribute="top" secondItem="iRF-WV-GDp" secondAttribute="bottom" constant="21" id="VbS-WQ-5Rc"/>
+                            <constraint firstItem="cHg-g4-A9d" firstAttribute="top" secondItem="lPk-aS-Izc" secondAttribute="bottom" constant="21" id="a6X-Pw-i8Y"/>
+                            <constraint firstItem="lPk-aS-Izc" firstAttribute="centerY" secondItem="bMJ-zE-O5d" secondAttribute="centerY" id="iuE-e3-uo2"/>
+                            <constraint firstItem="lPk-aS-Izc" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="lLL-Qu-R8b"/>
+                            <constraint firstItem="cHg-g4-A9d" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="xbb-TL-I6G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jFM-PD-dlM"/>
+                    </view>
+                    <connections>
+                        <outlet property="addSubjectButton" destination="iRF-WV-GDp" id="RDx-Be-MuH"/>
+                        <outlet property="addTopicButton" destination="lPk-aS-Izc" id="pMF-cg-swJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk7-GU-Ibu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="72"/>
+        </scene>
+    </scenes>
+</document>
