@@ -22,7 +22,7 @@
                                 <color key="tintColor" name="BlackAndWhite"/>
                                 <color key="barTintColor" name="WhiteAndBlack"/>
                                 <items>
-                                    <navigationItem title="Addition" id="HHT-Nc-dDz">
+                                    <navigationItem id="HHT-Nc-dDz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Ld-XV-asF">
                                             <color key="tintColor" name="BlackAndWhite"/>
                                             <connections>
@@ -52,31 +52,23 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-Yj-Z5t">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
-                                        <color key="backgroundColor" name="WhiteAndBlack"/>
-                                        <color key="tintColor" name="BlackAndWhite"/>
+                                        <color key="backgroundColor" name="BlackAndWhite"/>
+                                        <color key="tintColor" name="WhiteAndBlack"/>
+                                        <color key="textColor" name="WhiteAndBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="keP-gD-sii">
                                         <rect key="frame" x="0.0" y="50" width="288" height="127"/>
                                         <color key="backgroundColor" name="BlackAndWhite"/>
-                                        <color key="tintColor" name="BlackAndWhite"/>
+                                        <color key="tintColor" name="WhiteAndBlack"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" name="BlackAndWhite"/>
+                                        <color key="textColor" name="WhiteAndBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xZD-14-MqV">
-                                <rect key="frame" x="16" y="60" width="288" height="169"/>
-                                <color key="backgroundColor" name="WhiteAndBlack"/>
-                                <color key="tintColor" name="BlackAndWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-7m-N2J">
                                 <rect key="frame" x="40" y="191" width="240" height="34"/>
                                 <color key="backgroundColor" name="WhiteAndBlack"/>
@@ -90,9 +82,7 @@
                         <constraints>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="top" secondItem="xGG-tm-8Kp" secondAttribute="bottom" constant="16" id="0Kc-iG-ZAC"/>
                             <constraint firstItem="xGG-tm-8Kp" firstAttribute="top" secondItem="tCS-T2-e6d" secondAttribute="bottom" constant="8" id="6a4-yg-cfR"/>
-                            <constraint firstItem="xZD-14-MqV" firstAttribute="top" secondItem="tCS-T2-e6d" secondAttribute="bottom" constant="16" id="BKN-UG-Lw0"/>
                             <constraint firstItem="xGG-tm-8Kp" firstAttribute="leading" secondItem="bMJ-zE-O5d" secondAttribute="leading" constant="16" id="BdM-xv-RSr"/>
-                            <constraint firstItem="xZD-14-MqV" firstAttribute="leading" secondItem="jFM-PD-dlM" secondAttribute="leading" constant="16" id="Eka-hL-NnH"/>
                             <constraint firstItem="xBR-7m-N2J" firstAttribute="leading" secondItem="jFM-PD-dlM" secondAttribute="leading" constant="40" id="Jbn-ef-gHX"/>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="top" secondItem="xBR-7m-N2J" secondAttribute="bottom" constant="20" id="LWf-32-D5I"/>
                             <constraint firstItem="tCS-T2-e6d" firstAttribute="leading" secondItem="jFM-PD-dlM" secondAttribute="leading" id="Qh3-se-Ti9"/>
@@ -103,8 +93,6 @@
                             <constraint firstItem="IfW-pe-d85" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="g1k-Hq-jI1"/>
                             <constraint firstItem="tCS-T2-e6d" firstAttribute="top" secondItem="jFM-PD-dlM" secondAttribute="top" id="gzI-bC-tdg"/>
                             <constraint firstItem="tCS-T2-e6d" firstAttribute="trailing" secondItem="jFM-PD-dlM" secondAttribute="trailing" id="hgb-i8-ZVM"/>
-                            <constraint firstItem="IfW-pe-d85" firstAttribute="top" secondItem="xZD-14-MqV" secondAttribute="bottom" constant="16" id="ixR-AS-uRM"/>
-                            <constraint firstItem="jFM-PD-dlM" firstAttribute="trailing" secondItem="xZD-14-MqV" secondAttribute="trailing" constant="16" id="pyS-8z-POS"/>
                             <constraint firstItem="jFM-PD-dlM" firstAttribute="trailing" secondItem="xGG-tm-8Kp" secondAttribute="trailing" constant="16" id="xxe-Qf-Vsr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jFM-PD-dlM"/>
@@ -114,8 +102,8 @@
                         <outlet property="discriptionStackViewOutlet" destination="xGG-tm-8Kp" id="c9z-Sv-dS9"/>
                         <outlet property="discriptionTextFieldOutlet" destination="OpH-Yj-Z5t" id="uat-QU-g0h"/>
                         <outlet property="discriptionTextViewOutlet" destination="keP-gD-sii" id="RTe-Yt-kmL"/>
+                        <outlet property="navigationIT" destination="HHT-Nc-dDz" id="zlt-Gu-Nik"/>
                         <outlet property="subjectsTextField" destination="xBR-7m-N2J" id="58i-vi-abR"/>
-                        <outlet property="topicTextViewOutlet" destination="xZD-14-MqV" id="TiC-L8-lAy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dk7-GU-Ibu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
