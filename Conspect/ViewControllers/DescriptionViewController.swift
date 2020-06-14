@@ -31,7 +31,6 @@ class DescriptionViewController: UIViewController {
         descriptionTextView.text = subjects[indexOfSubjects].topics[indexOfTopics].description
         descriptionTextView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
         
-        fontStepper.tintColor = .blue
         fontStepper.value = 17
         fontStepper.minimumValue = 12
         fontStepper.maximumValue = 25
@@ -41,8 +40,6 @@ class DescriptionViewController: UIViewController {
     @IBAction func goBack() {
         subjects[indexOfSubjects].topics[indexOfTopics].name = headerLabel.text ?? ""
         subjects[indexOfSubjects].topics[indexOfTopics].description = descriptionTextView.text
-        print(subjects[indexOfSubjects].topics[indexOfTopics].name)
-        print(subjects[indexOfSubjects].topics[indexOfTopics].description)
         
         delegate.setNewNameOfCell(nameOfCell: headerLabel.text ?? "")
         
