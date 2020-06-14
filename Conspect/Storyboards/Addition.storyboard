@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -23,7 +23,7 @@
                                 <color key="barTintColor" name="WhiteAndBlack"/>
                                 <items>
                                     <navigationItem id="HHT-Nc-dDz">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Ld-XV-asF">
+                                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="9Ld-XV-asF">
                                             <color key="tintColor" name="BlackAndWhite"/>
                                             <connections>
                                                 <action selector="cancelButtonTapped" destination="ajR-Yt-1Gu" id="1YL-bF-uV5"/>
@@ -33,14 +33,11 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfW-pe-d85">
-                                <rect key="frame" x="103.5" y="245" width="113" height="38"/>
+                                <rect key="frame" x="103" y="245" width="114" height="38"/>
                                 <color key="backgroundColor" name="BlackAndWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IfW-pe-d85" secondAttribute="height" multiplier="113:38" id="VFL-wR-Bk6"/>
-                                </constraints>
                                 <color key="tintColor" name="WhiteAndBlack"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="Понятненька">
+                                <state key="normal" title="Понятненько">
                                     <color key="titleColor" name="WhiteAndBlack"/>
                                 </state>
                                 <connections>
@@ -52,26 +49,22 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-Yj-Z5t">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
-                                        <color key="backgroundColor" name="BlackAndWhite"/>
-                                        <color key="tintColor" name="WhiteAndBlack"/>
-                                        <color key="textColor" name="WhiteAndBlack"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="keP-gD-sii">
                                         <rect key="frame" x="0.0" y="50" width="288" height="127"/>
-                                        <color key="backgroundColor" name="BlackAndWhite"/>
-                                        <color key="tintColor" name="WhiteAndBlack"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" name="WhiteAndBlack"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-7m-N2J">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-7m-N2J">
                                 <rect key="frame" x="40" y="191" width="240" height="34"/>
-                                <color key="backgroundColor" name="WhiteAndBlack"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="BlackAndWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -88,7 +81,6 @@
                             <constraint firstItem="tCS-T2-e6d" firstAttribute="leading" secondItem="jFM-PD-dlM" secondAttribute="leading" id="Qh3-se-Ti9"/>
                             <constraint firstItem="xBR-7m-N2J" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="TRt-oQ-XAz"/>
                             <constraint firstItem="jFM-PD-dlM" firstAttribute="trailing" secondItem="xBR-7m-N2J" secondAttribute="trailing" constant="40" id="UdR-jQ-mrl"/>
-                            <constraint firstItem="IfW-pe-d85" firstAttribute="width" secondItem="bMJ-zE-O5d" secondAttribute="height" multiplier="113:568" id="cWb-GK-dqW"/>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="centerY" secondItem="bMJ-zE-O5d" secondAttribute="centerY" constant="-20" id="dP9-UX-FhR"/>
                             <constraint firstItem="IfW-pe-d85" firstAttribute="centerX" secondItem="bMJ-zE-O5d" secondAttribute="centerX" id="g1k-Hq-jI1"/>
                             <constraint firstItem="tCS-T2-e6d" firstAttribute="top" secondItem="jFM-PD-dlM" secondAttribute="top" id="gzI-bC-tdg"/>
@@ -99,9 +91,9 @@
                     </view>
                     <connections>
                         <outlet property="buttonApplyOutlet" destination="IfW-pe-d85" id="fhQ-I9-asR"/>
-                        <outlet property="discriptionStackViewOutlet" destination="xGG-tm-8Kp" id="c9z-Sv-dS9"/>
+                        <outlet property="descriptionStackViewOutlet" destination="xGG-tm-8Kp" id="c9z-Sv-dS9"/>
+                        <outlet property="descriptionTextViewOutlet" destination="keP-gD-sii" id="RTe-Yt-kmL"/>
                         <outlet property="discriptionTextFieldOutlet" destination="OpH-Yj-Z5t" id="uat-QU-g0h"/>
-                        <outlet property="discriptionTextViewOutlet" destination="keP-gD-sii" id="RTe-Yt-kmL"/>
                         <outlet property="navigationIT" destination="HHT-Nc-dDz" id="zlt-Gu-Nik"/>
                         <outlet property="subjectsTextField" destination="xBR-7m-N2J" id="58i-vi-abR"/>
                     </connections>

@@ -51,6 +51,13 @@ class DataManager {
         subjects[indexOfSubjects].topics = topics
     }
     
+    func updateSelectedTopic(indexOfSubjects: Int, indexOfTopics: Int, name: String, description: String) {
+        print(#function)
+        var topics = subjects[indexOfSubjects].topics
+        topics[indexOfTopics] = Topic(name: name, description: description)
+        subjects[indexOfSubjects].topics = topics
+    }
+
     func removeSelectedTopic(indexOfSubjects: Int, indexOfTopics: Int) {
         print(#function)
         var topics = subjects[indexOfSubjects].topics

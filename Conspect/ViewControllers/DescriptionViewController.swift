@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol DescriptionViewControllerDelegate {
     func setNewNameOfCell(nameOfCell: String)
 }
@@ -16,22 +15,15 @@ protocol DescriptionViewControllerDelegate {
 class DescriptionViewController: UIViewController {
 
     var subjects: [Subject] = DataManager.shared.subjects
-    
-
     var indexOfSubjects: Int!
     var indexOfTopics: Int!
-    
     var delegate: DescriptionViewControllerDelegate!
-    
     
     //MARK: IB Outlets
     @IBOutlet weak var headerLabel: UILabel!
-    
     @IBOutlet weak var descriptionTextView: UITextView!
-    
     @IBOutlet weak var fontStepper: UIStepper!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         headerLabel.text = subjects[indexOfSubjects].topics[indexOfTopics].name
@@ -43,11 +35,8 @@ class DescriptionViewController: UIViewController {
         fontStepper.value = 17
         fontStepper.minimumValue = 12
         fontStepper.maximumValue = 25
-        
-        
     }
-    
-    
+       
     //MARK: IB Actions
     @IBAction func goBack() {
         subjects[indexOfSubjects].topics[indexOfTopics].name = headerLabel.text ?? ""
@@ -66,17 +55,16 @@ class DescriptionViewController: UIViewController {
         descriptionTextView.font = UIFont(name: fontName!, size: fontSize)
     }
     
-    
-    
      // MARK: - Navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let additionVC = segue.destination as? AdditionViewController else { return }
         additionVC.descriptionTextFieldSource = headerLabel.text
         additionVC.descriptionTextViewOutletSource = descriptionTextView.text
+        additionVC.indexOfSubjects = indexOfSubjects
+        additionVC.indexOfTopics = indexOfTopics
         additionVC.showContents = 3
         additionVC.delegateDiscription = self
      }
-     
 }
 
 extension DescriptionViewController: AdditionViewControllerDelegate {
@@ -84,10 +72,4 @@ extension DescriptionViewController: AdditionViewControllerDelegate {
         headerLabel.text = header
         descriptionTextView.text = description
     }
-    
-    
 }
-
-
-
-

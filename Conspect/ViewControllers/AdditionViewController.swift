@@ -9,11 +9,11 @@
 import UIKit
 
 protocol AdditionTopicViewControllerDelegate {
-        func returnAdditionData(indexOfSubjects: Int, name: String, description: String)
+    func returnAdditionData(indexOfSubjects: Int, name: String, description: String)
 }
 
 protocol AdditionSubjectViewControllerDelegate {
-        func returnAdditionData(name: String)
+    func returnAdditionData(name: String)
 }
 
 protocol AdditionViewControllerDelegate {
@@ -22,22 +22,16 @@ protocol AdditionViewControllerDelegate {
 
 class AdditionViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var buttonApplyOutlet: UIButton!
-    
     @IBOutlet weak var subjectsTextField: UITextField!
-    
-    @IBOutlet weak var discriptionStackViewOutlet: UIStackView!
+    @IBOutlet weak var descriptionStackViewOutlet: UIStackView!
     @IBOutlet weak var discriptionTextFieldOutlet: UITextField!
-    @IBOutlet weak var discriptionTextViewOutlet: UITextView!
-    
+    @IBOutlet weak var descriptionTextViewOutlet: UITextView!
     @IBOutlet weak var navigationIT: UINavigationItem!
-    
-    
     
     var subjects: [Subject] = DataManager.shared.subjects
     var indexOfSubjects: Int!
+    var indexOfTopics: Int!
     var showContents = 0
     
     var delegateSubject: AdditionSubjectViewControllerDelegate!
@@ -48,21 +42,19 @@ class AdditionViewController: UIViewController {
     var descriptionTextViewOutletSource: String!
     
     let navItem = UINavigationItem()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hidenContents()
+        hideContents()
         showContents(showContents)
-        pressButtonChoice(showContents)
         roundsCorners()
         
         discriptionTextFieldOutlet.text = descriptionTextFieldSource
-        discriptionTextViewOutlet.text = descriptionTextViewOutletSource
+        descriptionTextViewOutlet.text = descriptionTextViewOutletSource
     }
     
     @IBAction func cancelButtonTapped() {
-        pressButtonChoice(showContents)
         dismiss(animated: true)
     }
     
@@ -70,20 +62,23 @@ class AdditionViewController: UIViewController {
         pressButtonChoice(showContents)
     }
     
-    private func hidenContents() {
+    private func hideContents() {
         subjectsTextField.isHidden = true
-        discriptionStackViewOutlet.isHidden = true
+        descriptionStackViewOutlet.isHidden = true
     }
     
     private func showContents(_ showContents: Int) {
         switch showContents {
         case 1:
             subjectsTextField.isHidden = false
+            navigationIT.title = "Добавить раздел"
         case 2:
-            discriptionStackViewOutlet.isHidden = false
-            discriptionTextViewOutlet.text = nil
+            descriptionStackViewOutlet.isHidden = false
+            descriptionTextViewOutlet.text = nil
+            navigationIT.title = "Добавить подраздел"
         default:
-            discriptionStackViewOutlet.isHidden = false
+            descriptionStackViewOutlet.isHidden = false
+            navigationIT.title = "Редактировать подраздел"
         }
     }
     
@@ -91,26 +86,31 @@ class AdditionViewController: UIViewController {
         switch showContents {
         case 1:
             print("Add new subject")
-            navigationIT.title = "Добавить новый Раздел"
-            DataManager.shared.addNewSubject(name: subjectsTextField.text ?? "", topics: [])
+            DataManager.shared.addNewSubject(name: subjectsTextField.text ?? "",
+                                             topics: [])
             delegateSubject.returnAdditionData(name: subjectsTextField.text ?? "")
-            dismiss(animated: true)
         case 2:
             print("Add new topic")
-            navigationIT.title = "Добавить описание"
-            DataManager.shared.addNewTopic(indexOfSubjects: indexOfSubjects, name: "New topic", description: discriptionTextViewOutlet.text ?? "")
-            delegateTopic.returnAdditionData(indexOfSubjects: indexOfSubjects, name: "New topic", description: discriptionTextViewOutlet.text ?? "")
-            dismiss(animated: true)
+            DataManager.shared.addNewTopic(indexOfSubjects: indexOfSubjects,
+                                           name: discriptionTextFieldOutlet.text ?? "",
+                                           description: descriptionTextViewOutlet.text)
+            delegateTopic.returnAdditionData(indexOfSubjects: indexOfSubjects,
+                                             name: discriptionTextFieldOutlet.text ?? "",
+                                             description: descriptionTextViewOutlet.text)
         default:
-            delegateDiscription.saveChangingDescriptionAndHeader(description: discriptionTextViewOutlet.text,
+            print("Update topic")
+            DataManager.shared.updateSelectedTopic(indexOfSubjects: indexOfSubjects,
+                                                   indexOfTopics: indexOfTopics,
+                                                   name: (discriptionTextFieldOutlet.text ?? ""),
+                                                   description: descriptionTextViewOutlet.text)
+            delegateDiscription.saveChangingDescriptionAndHeader(description: descriptionTextViewOutlet.text,
                                                                  header: discriptionTextFieldOutlet.text ?? "")
-            dismiss(animated: true)  
         }
+        dismiss(animated: true)
     }
     
     private func roundsCorners() {
         buttonApplyOutlet.layer.cornerRadius = buttonApplyOutlet.frame.height / 4
-        
-        discriptionTextViewOutlet.layer.cornerRadius = discriptionTextViewOutlet.frame.height / 12
+        descriptionTextViewOutlet.layer.cornerRadius = descriptionTextViewOutlet.frame.height / 12
     }
 }

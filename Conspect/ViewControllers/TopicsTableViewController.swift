@@ -9,26 +9,13 @@
 import UIKit
 
 class TopicsTableViewController: UITableViewController {
-
+    
     var subjects: [Subject] = DataManager.shared.subjects
     var indexOfSubjects: Int = 0
     
     private var topics: [Topic] = []
     private var name = ""
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // заглушка для отладки автомномно
-        if subjects.count == 0 {
-            indexOfSubjects = 0
-            subjects = [Subject(name: "Swift",
-                                topics: [Topic(name: "Constraint", description: "Описание Constraint"),
-                                         Topic(name: "Delegate", description: "Описание Delegate")
-            ])]
-        }
-    }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)        
         updateTableView()
@@ -38,14 +25,14 @@ class TopicsTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topics.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topicCell", for: indexPath)
-
+        
         cell.textLabel?.text = topics[indexPath.row].name
         
         return cell
@@ -58,13 +45,13 @@ class TopicsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "Удалить"
     }
-        
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             showActionSheet(withTitle: topics[indexPath.row].name, andMessage: "Удалить?", indexPath: indexPath)
         }
     }
-            
+    
     private func updateTableView() {
         subjects = DataManager.shared.subjects
         name = subjects[indexOfSubjects].name
@@ -84,7 +71,7 @@ class TopicsTableViewController: UITableViewController {
         actionSheet.addAction(noAction)
         present(actionSheet, animated: true)
     }
-
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
@@ -97,6 +84,7 @@ class TopicsTableViewController: UITableViewController {
         case "additionSegue":
             let additionVC = segue.destination as! AdditionViewController
             additionVC.indexOfSubjects = indexOfSubjects
+            additionVC.indexOfTopics = 0
             additionVC.showContents = 2
             additionVC.delegateTopic = self
         default:
