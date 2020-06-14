@@ -62,6 +62,7 @@ class AdditionViewController: UIViewController {
     }
     
     @IBAction func cancelButtonTapped() {
+        pressButtonChoice(showContents)
         dismiss(animated: true)
     }
     

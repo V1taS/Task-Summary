@@ -74,7 +74,7 @@ class DescriptionViewController: UIViewController {
         additionVC.descriptionTextFieldSource = headerLabel.text
         additionVC.descriptionTextViewOutletSource = descriptionTextView.text
         additionVC.showContents = 3
-        additionVC.delegate = self
+        additionVC.delegateDiscription = self
      }
      
 }
