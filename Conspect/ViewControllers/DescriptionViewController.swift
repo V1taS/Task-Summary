@@ -9,8 +9,6 @@
 import UIKit
 
 
-
-
 protocol DescriptionViewControllerDelegate {
     func setNewNameOfCell(nameOfCell: String)
 }
@@ -54,6 +52,8 @@ class DescriptionViewController: UIViewController {
     @IBAction func goBack() {
         subjects[indexOfSubjects].topics[indexOfTopics].name = headerLabel.text ?? ""
         subjects[indexOfSubjects].topics[indexOfTopics].description = descriptionTextView.text
+        print(subjects[indexOfSubjects].topics[indexOfTopics].name)
+        print(subjects[indexOfSubjects].topics[indexOfTopics].description)
         
         delegate.setNewNameOfCell(nameOfCell: headerLabel.text ?? "")
         
