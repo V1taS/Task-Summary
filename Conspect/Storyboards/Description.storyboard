@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,13 +10,13 @@
         <!--Description View Controller-->
         <scene sceneID="KeI-Kc-CrB">
             <objects>
-                <viewController storyboardIdentifier="descriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9LV-C0-NgG" customClass="DescriptionViewController" customModule="ConspectWorkingInTeam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="descriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9LV-C0-NgG" customClass="DescriptionViewController" customModule="Conspect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YTx-mM-CeJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hkS-dp-aSt">
-                                <rect key="frame" x="132" y="60" width="172" height="24"/>
+                                <rect key="frame" x="187" y="60" width="172" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Шрифт:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjV-hr-Lut">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="24"/>
@@ -36,17 +36,17 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43.5" id="dKR-T8-3qU"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="LmM-ZX-YE3">
-                                <rect key="frame" x="16" y="110" width="288" height="438"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="LmM-ZX-YE3">
+                                <rect key="frame" x="16" y="110" width="343" height="537"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-SD-4yC">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="26.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labo" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-iJ-i1T">
-                                        <rect key="frame" x="0.0" y="47.5" width="288" height="390.5"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-iJ-i1T">
+                                        <rect key="frame" x="0.0" y="47.5" width="343" height="489.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
@@ -55,7 +55,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jo-Ga-rvZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                 <items>
                                     <navigationItem id="TFi-qL-vl8">
                                         <barButtonItem key="leftBarButtonItem" title="Понятненько" id="CvP-Yn-DsL">
