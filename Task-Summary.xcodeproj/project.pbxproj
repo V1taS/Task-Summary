@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B9B16832492CFAF0075A586 /* Conspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B9B16832492CFAF0075A586 /* Task-Summary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-Summary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9B16862492CFAF0075A586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B9B16882492CFAF0075A586 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1B9B168F2492CFB30075A586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		1B9B16842492CFAF0075A586 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B9B16832492CFAF0075A586 /* Conspect.app */,
+				1B9B16832492CFAF0075A586 /* Task-Summary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B9B16822492CFAF0075A586 /* Conspect */ = {
+		1B9B16822492CFAF0075A586 /* Task-Summary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B9B16972492CFB30075A586 /* Build configuration list for PBXNativeTarget "Conspect" */;
+			buildConfigurationList = 1B9B16972492CFB30075A586 /* Build configuration list for PBXNativeTarget "Task-Summary" */;
 			buildPhases = (
 				1B9B167F2492CFAF0075A586 /* Sources */,
 				1B9B16802492CFAF0075A586 /* Frameworks */,
@@ -157,9 +157,9 @@
 			);
 			dependencies = (
 			);
-			name = Conspect;
+			name = "Task-Summary";
 			productName = Conspect;
-			productReference = 1B9B16832492CFAF0075A586 /* Conspect.app */;
+			productReference = 1B9B16832492CFAF0075A586 /* Task-Summary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +177,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B9B167E2492CFAF0075A586 /* Build configuration list for PBXProject "Conspect" */;
+			buildConfigurationList = 1B9B167E2492CFAF0075A586 /* Build configuration list for PBXProject "Task-Summary" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,7 +190,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B9B16822492CFAF0075A586 /* Conspect */,
+				1B9B16822492CFAF0075A586 /* Task-Summary */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Vitalii-Sosin.Conspect";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Task-Summary";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -388,7 +388,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Vitalii-Sosin.Conspect";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Task-Summary";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,7 +397,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B9B167E2492CFAF0075A586 /* Build configuration list for PBXProject "Conspect" */ = {
+		1B9B167E2492CFAF0075A586 /* Build configuration list for PBXProject "Task-Summary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B9B16952492CFB30075A586 /* Debug */,
@@ -406,7 +406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B9B16972492CFB30075A586 /* Build configuration list for PBXNativeTarget "Conspect" */ = {
+		1B9B16972492CFB30075A586 /* Build configuration list for PBXNativeTarget "Task-Summary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B9B16982492CFB30075A586 /* Debug */,
