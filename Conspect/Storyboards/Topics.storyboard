@@ -32,7 +32,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="wCc-Gd-97l" kind="presentation" identifier="descriptionSegue" modalPresentationStyle="fullScreen" id="izA-9C-Noo"/>
+                                    <segue destination="wCc-Gd-97l" kind="show" identifier="descriptionSegue" id="izA-9C-Noo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
